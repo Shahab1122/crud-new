@@ -22,6 +22,11 @@ if(isset($_POST['btn_add'])){
         $pic =  $now_time."".$pic;
         $pic_tmp = $_FILES ['img']['tmp_name'];
     }
+    //CV Upload In Folder & Save
+    $cv = $_FILES ['file'] ['name'];
+    $now_time = time();
+    $cv = $now_time."".$cv;
+    $cv_tmp = $_FILES['file'] ['tmp_name'];
     
      
         $sql  = "INSERT INTO `profile` (`fname`, `lname`, `city`, `radio`,`chk_skills`, `file_image`, `file`) 
